@@ -53,3 +53,13 @@ params:
 
   recent_posts:
     enable: true
+
+  markup:
+    goldmark:
+      renderer:
+        unsafe: true
+    highlight:
+      lineNos: true
+  enableEmoji: true
+
+  
