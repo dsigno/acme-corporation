@@ -1,4 +1,9 @@
-# About Us
+---
+title: About Us
+date: 2020-01-01T03:00:00Z
+description: World's leading manufacturer of digital shapes. We shape the world. You live in it.
+draft: false
+---
 
 Acme Corporation&trade; is the world's leading manufacturer of digital shapes. From squares and circles to triangles and hexagons, we have it all. Browse through our collection of various forms with different thicknesses and line styles.
 
@@ -37,15 +42,13 @@ Triangle |  &#9651; | Three lines with three corners | [Triangle on Wikipedia](h
 ## Team
 
 Alex
-: Hippy Web Developer 
-: Technophile 
+: Hippy Web Developer
+: Technophile
 
 Bob
-: Classic SysAdmin 
-: Conservative 
+: Classic SysAdmin
+: Conservative
 
 Gabby
-: Cool Content Master 
-: Cautious 
-
-
+: Cool Content Master
+: Cautious
