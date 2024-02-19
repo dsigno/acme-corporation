@@ -1,3 +1,9 @@
+---
+title: Square License
+tags: [shape, style, manufacturing]
+categories: [square, general ]
+---
+
 A license (American English) or licence (British English) is an official permission or permit to do, use, or own something (as well as the document of that permission or permit).
 
 A license can be granted by a party to another party as an element of an agreement between those parties. A shorthand definition of a license is "an authorization to use licensed material."
@@ -12,6 +18,6 @@ Territory: a license may stipulate what territory the rights pertain to. For exa
 
 A shorthand definition of license is "a promise by the licensor not to sue the licensee". That means without a license any use or exploitation of intellectual property by a third party would amount to copying or infringement. Such copying would be improper and could, by using the legal system, be stopped if the intellectual property owner wanted to do so.
 
-Intellectual property licensing plays a major role in business, academia and broadcasting. Business practices such as franchising, technology transfer, publication and character merchandising entirely depend on the licensing of intellectual property. Land licensing (proprietary licensing) and IP licensing form sub-branches of law born out of the interplay of general laws of contract and specific principles and statutory laws relating to these respective assets. 
+Intellectual property licensing plays a major role in business, academia and broadcasting. Business practices such as franchising, technology transfer, publication and character merchandising entirely depend on the licensing of intellectual property. Land licensing (proprietary licensing) and IP licensing form sub-branches of law born out of the interplay of general laws of contract and specific principles and statutory laws relating to these respective assets.
 
 Content from [wikipedia](https://en.wikipedia.org/wiki/License).
