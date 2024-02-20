@@ -39,13 +39,7 @@ At Acme Corporation, we take pride in what we create. Our manufacturing process 
 
 ## Products
 
-We make over __*200 shapes*__. The most popular of these include:
-
-Shape |  Design | Description | Links
-------|---------|-------------|----
-Line | -- |  Two pointy ends and a straight stretch of ink | [Line on Wikipedia](https://en.wikipedia.org/wiki/Line_-geometry-)
-Circle | &#8413; | A full round with no corners | [Circle on Wikipedia](https://en.wikipedia.org/wiki/Circle)
-Triangle |  &#9651; | Three lines with three corners | [Triangle on Wikipedia](https://en.wikipedia.org/wiki/Triangle)
+{{% productInfo %}}
 
 ## Team
 
