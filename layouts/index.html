@@ -9,6 +9,26 @@
     {{with $title}}<title>{{.}}</title>{{end}}
   </head>
   <body class="home">
+    <header>
+      <a href="{{ site.BaseURL | relLangURL }}">
+        <img src="./image/logo.svg" alt="Acme Logo"
+             height="36" width="48" />
+        Acme Corporation
+      </a>
+      {{with site.Menus.main }}
+        <nav>
+          <button class="hamburger">&#9776;</button>
+          <ul>
+            {{range .}}
+              <li>
+                <a href="{{.URL}}">{{.Name | humanize}}</a>
+              </li>
+            {{end}}
+          </ul>
+        </nav>
+      {{end}}
+    </header>
+
     <section id="intro">
       <img src="./image/logo.svg" alt="Acme Logo" width="64"/>
       {{with $title}}<h1>{{.}}</h1>{{end}}
@@ -40,10 +60,10 @@
     </section>
     {{end}}
 
-    {{with 
-      (where site.RegularPages 
+    {{with
+      (where site.RegularPages
       ".Section" "in" site.Params.mainSections)
-    }} 
+    }}
     <section id="blog">
         <h1>From our blog</h1>
         <ul class="posts">
@@ -54,13 +74,32 @@
                 {{.Title}}
               </h2>
               <article>
-                {{.Summary}} 
+                {{.Summary}}
               </article>
               <div>Read More</div>
             </a>
           </li>
           {{end}}
         </ul>
+    </section>
+    {{end}}
+
+    {{with .Param "testimonials"}}
+    <section id="testimonials">
+    <h1>Customer endorsement</h1>
+    <div>
+      <ol>
+        {{range .}}
+        <li>
+            <p>{{.content}}</p>
+            <div>
+              <h2>{{.author}}</h2>
+              <h3>{{.from}}</h3>
+            </div>
+        </li>
+        {{end}}
+      </ol>
+    </div>
     </section>
     {{end}}    
 
