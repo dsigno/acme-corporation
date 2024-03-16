@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    {{with $.Description}}<meta name="description" content="{{.}}">{{end}}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./index.css">
-    {{$title := default site.Title $.Title}}
-    {{with $title}}<title>{{.}}</title>{{end}}
-  </head>
-  <body class="home">
-    <header>
-      <a href="{{ site.BaseURL | relLangURL }}">
-        <img src="./image/logo.svg" alt="Acme Logo"
+{{define "body"}}
+{{$title := default site.Title .Title}}
+  <header>
+    <a href="{{ site.BaseURL | relLangURL }}">
+    <img src="./image/logo.svg" alt="Acme Logo" 
              height="36" width="48" />
         Acme Corporation
-      </a>
-      {{with site.Menus.main }}
+    </a>
+    {{with site.Menus.main }}
         <nav>
           <button class="hamburger">&#9776;</button>
           <ul>
@@ -28,14 +19,11 @@
         </nav>
       {{end}}
     </header>
-
     <section id="intro">
-      <img src="./image/logo.svg" alt="Acme Logo" width="64"/>
       {{with $title}}<h1>{{.}}</h1>{{end}}
       {{with .Param "subtitle"}}<h2>{{. | humanize | markdownify}}</h2>{{end}}
       <a href="{{ref . (.Param "explore")}}">Explore</a>
     </section>
-
     {{with resources.GetMatch "products.csv"}}
     <section id="products">
       <h1>Our Products</h1>
@@ -55,36 +43,33 @@
       <a href="{{.Permalink}}" download>Download listing</a>
     </section>
     {{end}}
-
     <section id="description">
       {{.Content}}
     </section>
-
     {{with site.Menus.main }}
-    <section id="menu">
+      <section id="menu">
       <h1>Website sections</h1>
-      <h2>This website has these major areas</h2>
-      <ul>
-        {{ range . }}
-        <li>
-          <a href="{{.URL}}">
-            <i class="icon-{{.Identifier}}"></i>
-            {{.Name | humanize}}
-          </a>
-          {{with .Post}}<p>{{.}}</p>{{end}}
-        </li>
-        {{ else }}
-        {{/* Log for the website editor/developer */}}
-        <!-- No menu entries present -->
-        {{end}}
-      </ul>
-    </section>
+        <h2>This website has these major areas</h2>
+        <ul>
+          {{ range . }}
+          <li>
+            <a href="{{.URL}}">
+              <i class="icon-{{.Identifier}}"></i>
+              {{.Name | humanize}}
+            </a>
+            {{with .Post}}<p>{{.}}</p>{{end}}
+          </li>
+          {{ else }}
+          {{/* Log for the website editor/developer */}}
+          <!-- No menu entries present -->
+          {{end}}
+        </ul>
+      </section>
     {{end}}
-
-    {{with
-      (where site.RegularPages
+    {{with 
+      (where site.RegularPages 
       ".Section" "in" site.Params.mainSections)
-    }}
+    }} 
     <section id="blog">
         <h1>From our blog</h1>
         <ul class="posts">
@@ -95,7 +80,7 @@
                 {{.Title}}
               </h2>
               <article>
-                {{.Summary}}
+                {{.Summary}} 
               </article>
               <div>Read More</div>
             </a>
@@ -104,7 +89,6 @@
         </ul>
     </section>
     {{end}}
-
     {{with .Param "testimonials"}}
     <section id="testimonials">
     <h1>Customer endorsement</h1>
@@ -123,7 +107,6 @@
     </div>
     </section>
     {{end}}
-
     <footer class="dark">
       {{with site.Menus.footer }}
       <nav>
@@ -160,6 +143,5 @@
         {{end}}
       </ul>
       <div>{{.Param "copyright" | markdownify}}</div>
-    </footer>
-  </body>
-</html>
+  </footer>
+{{ end }}
